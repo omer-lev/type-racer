@@ -1,0 +1,20 @@
+:root {
+  --txt-main: rgb(221, 217, 217);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  background-color: #1f1e24;
+  color: var(--txt-main);
+}
+
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
+}

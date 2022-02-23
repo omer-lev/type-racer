@@ -1,0 +1,26 @@
+.Room {
+    text-align: center;
+}
+
+.Room .text {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .8rem;
+    justify-content: center;
+}
+
+.Room input {
+    width: 30%;
+    height: 2rem;
+    margin: 2rem;
+    font-size: 1.2rem;
+    outline: none;
+}
+
+.Room .text .incorrect {
+    color: red;
+}
+
+.Room .text .correct {
+    color: lime;
+}
