@@ -21,6 +21,8 @@ const Room = ({ gameId }) => {
             return [...txt, ...text] 
         });
         setLoading(false);
+
+        fixInput(document.getElementById('0'), true);
     }, [gameId]);
 
 
@@ -42,6 +44,7 @@ const Room = ({ gameId }) => {
         const wordLength = wordDoc.children.length;
         const ltrIndex = currentVal.length - 1;
 
+
         !isRunning && start();
         
         if (pressed == null && ltrIndex <= wordLength) { // BACKSPACE
@@ -53,8 +56,9 @@ const Room = ({ gameId }) => {
         else if (pressed == " " && checkWord(currentVal)) { // SPACE
             (wordProgress == text.length - 1) && gameOver();
 
-            e.target.value = "";
             setWordProgress(wordProgress+1);
+
+            fixInput(document.getElementById(wordProgress+1)); // adjust input for next word
         } 
         
         else { // LETTERS
@@ -86,6 +90,20 @@ const Room = ({ gameId }) => {
         return word.substring(0, v.length) == v && word.length-1 == v.length;
     };
 
+
+    const fixInput = (nextWord, init=false) => {
+        const input = document.getElementById('input');
+        const x = nextWord.offsetLeft;
+        const y = nextWord.offsetTop;
+        const w = nextWord.offsetWidth;
+
+        input.style.left = `${x}px`;
+        input.style.top = `${y}px`;
+        input.style.width = `${w}px`;
+        input.value = "";
+    };
+
+
     const gameOver = () => {
         pause(); // pause stopwatch
 
@@ -93,7 +111,7 @@ const Room = ({ gameId }) => {
     };
 
     const replay = async () => {
-        const input = document.getElementsByTagName('input')[0];
+        const input = document.getElementById('input');
 
         reset(0, false); // stopwatch
         
@@ -119,7 +137,7 @@ const Room = ({ gameId }) => {
                 </div>
             }
 
-            <input type="text" autoFocus autoComplete='off' onChange={(e) => {handleInput(e)}} />
+            <input type="text" id='input' autoFocus autoComplete='off' onChange={(e) => {handleInput(e)}} />
 
             <div className="Timer">
                 <h2>{seconds}</h2>

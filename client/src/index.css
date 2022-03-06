@@ -1,6 +1,11 @@
 :root {
-  --txt-main: rgb(221, 217, 217);
-  --background: #1f1e24;
+  --txt-main: #CAD2C5;
+  /* --txt-main: rgb(221, 217, 217); */
+  --background: #1c2429;
+  /* --background: #1f1e24; */
+  --correct: #66c27c;
+  --nav-height: 8.5vh;
+  --word-gap: .5rem;
 }
 
 * {
@@ -14,6 +19,7 @@
 body {
   background-color: var(--background);
   color: var(--txt-main);
+  height: 100vh;
 }
 
 a, a:hover, a:focus, a:active {

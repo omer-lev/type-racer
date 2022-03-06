@@ -1,0 +1,31 @@
+nav {
+    height: var(--nav-height);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #222c314d;
+}
+
+nav .logo a {
+    font-size: 1.4rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+nav .logo a svg {
+    font-size: 2rem;
+    vertical-align: middle;
+}
+
+nav .logo a span {
+    color: #52796F;
+}
+
+nav .links a svg {
+    font-size: 1.5rem;
+    margin: 0 1rem;
+}
+
+nav .links a svg:hover {
+    color: #cad2c5c4;
+}
