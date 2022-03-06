@@ -1,26 +1,63 @@
 .Room {
     text-align: center;
+    margin-top: 20%;
 }
 
 .Room .text {
     display: flex;
     flex-wrap: wrap;
-    gap: .8rem;
+    gap: .5rem;
     justify-content: center;
+}
+
+.Room .text h3 {
+    font-weight: 400;
 }
 
 .Room input {
     width: 30%;
-    height: 2rem;
+    height: 2.7rem;
     margin: 2rem;
+    padding: 0 .5rem;
+
     font-size: 1.2rem;
+    font-weight: 300;
+    color: var(--txt-main);
+    background-color: #46454725;
+    
+    border: none;
+    border-radius: .2rem;
     outline: none;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.212);
 }
 
 .Room .text .incorrect {
-    color: red;
+    color: rgb(241, 52, 52);
 }
 
 .Room .text .correct {
-    color: lime;
+    color: rgb(9, 231, 113);
+}
+
+.replay {
+    width: 4rem;
+    height: 3rem;
+    margin: 2rem auto 0 auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: #3a3842af;
+    border-radius: 10%;
+    cursor: pointer;
+}
+
+.replay:hover {
+    color: rgba(245, 245, 245, 0.753);
+    background-color: #3a38428f;
+}
+
+.replay svg {
+    font-size: 2rem;
 }

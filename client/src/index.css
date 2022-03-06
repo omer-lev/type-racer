@@ -1,5 +1,6 @@
 :root {
   --txt-main: rgb(221, 217, 217);
+  --background: #1f1e24;
 }
 
 * {
@@ -7,10 +8,11 @@
   padding: 0;
   box-sizing: border-box;
   list-style: none;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
-  background-color: #1f1e24;
+  background-color: var(--background);
   color: var(--txt-main);
 }
 
